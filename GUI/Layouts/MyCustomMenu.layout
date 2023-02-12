@@ -1,0 +1,228 @@
+FrameWidgetClass rootFrame {
+ position 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ draggable 0
+ {
+  PanelWidgetClass pnl_frame {
+   ignorepointer 1
+   position -0.01338 -0.07339
+   size 0.42818 0.45778
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   draggable 0
+   style editor_quad
+   {
+    PanelWidgetClass pnl_bg {
+     ignorepointer 1
+     position 0 -0.00015
+     size 0.99 0.98971
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style rover_sim_black_2
+     {
+      TextWidgetClass Title {
+       ignorepointer 1
+       position 0 0
+       size 0.5 0.111
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "Player AI Faction info"
+       font "gui/fonts/Metron-Bold28"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      ScrollWidgetClass Scroller {
+       ignorepointer 0
+       position 0.00588 0.05087
+       size 0.98445 0.94723
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass Grid {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 10
+         Margin 1
+         "Size To Content H" 1
+         "Size To Content V" 1
+         Columns 6
+         Rows 100
+        }
+        RichTextWidgetClass RichTextWidget0 {
+         ignorepointer 1
+         position 0.08281 0.01554
+         size 0.21336 0.142
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Player:"
+         "text halign" center
+         "text valign" center
+        }
+        RichTextWidgetClass RichTextWidget1 {
+         ignorepointer 1
+         position 0.0651 0.29307
+         size 0.22324 0.142
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Faction:"
+         "text halign" center
+         "text valign" center
+        }
+        RichTextWidgetClass RichTextWidget2 {
+         clipchildren 1
+         ignorepointer 1
+         position 0.0842 0.16318
+         size 0.20614 0.12079
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DayZBold
+         text "Player ID:"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        ButtonWidgetClass BtnSetFaction {
+         position 0.01611 0.62289
+         size 0.26796 0.13271
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Default
+         text "Set Faction:"
+        }
+        RichTextWidgetClass RichTextWidget3 {
+         ignorepointer 1
+         position 0.06596 0.45236
+         size 0.22453 0.142
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "GroupID:"
+         "text halign" center
+         "text valign" center
+        }
+        EditBoxWidgetClass EdtFactionName {
+         position 0.28864 0.63169
+         size 0.62393 0.112
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+        }
+        TextWidgetClass TxtPlayerName {
+         ignorepointer 0
+         position 0.29161 0.02154
+         size 0.62429 0.12024
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass TxtPlayerUID {
+         ignorepointer 0
+         position 0.28891 0.16261
+         size 0.6208 0.12024
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass TxtPlayerFaction {
+         ignorepointer 0
+         position 0.28579 0.31575
+         size 0.62367 0.11757
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass TxtPlayerGroup {
+         ignorepointer 0
+         position 0.29626 0.47849
+         size 0.62388 0.1069
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+        RichTextWidgetClass TxtGroupCount {
+         ignorepointer 1
+         position 0.04303 0.77127
+         size 0.55428 0.16085
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         fixaspect fixwidth
+         text "Group count:"
+         "text halign" center
+         "text valign" center
+         wrap 0
+        }
+        TextWidgetClass TxtGroupnum {
+         ignorepointer 0
+         position 0.29201 0.81255
+         size 0.62388 0.1069
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
