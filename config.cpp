@@ -17,6 +17,7 @@ class CfgMods
 		dependencies[]=
 		{
 			"Game",
+			"World",
 			"Mission"
 		};
 		class defs
@@ -36,6 +37,14 @@ class CfgMods
 				files[]=
 				{
 					"dolphin/AI_GUI/3_Game"
+				};
+			};
+			class worldScriptModule
+			{
+				value="";
+				files[]=
+				{
+					"dolphin/AI_GUI/4_World"
 				};
 			};
 			class missionScriptModule

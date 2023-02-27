@@ -80,8 +80,8 @@ FrameWidgetClass rootFrame {
         }
         RichTextWidgetClass RichTextWidget0 {
          ignorepointer 1
-         position 0.08281 0.01554
-         size 0.21336 0.142
+         position 0.08281 0.01956
+         size 0.21853 0.10584
          hexactpos 0
          vexactpos 0
          hexactsize 0
@@ -92,8 +92,8 @@ FrameWidgetClass rootFrame {
         }
         RichTextWidgetClass RichTextWidget1 {
          ignorepointer 1
-         position 0.0651 0.29307
-         size 0.22324 0.142
+         position 0.0651 0.30914
+         size 0.21033 0.12593
          hexactpos 0
          vexactpos 0
          hexactsize 0
@@ -119,8 +119,8 @@ FrameWidgetClass rootFrame {
          "text valign" center
         }
         ButtonWidgetClass BtnSetFaction {
-         position 0.01611 0.62289
-         size 0.26796 0.13271
+         position 0.03419 0.63494
+         size 0.26021 0.11262
          hexactpos 0
          vexactpos 0
          hexactsize 0
@@ -130,8 +130,8 @@ FrameWidgetClass rootFrame {
         }
         RichTextWidgetClass RichTextWidget3 {
          ignorepointer 1
-         position 0.06596 0.45236
-         size 0.22453 0.142
+         position 0.06596 0.47245
+         size 0.20387 0.12191
          hexactpos 0
          vexactpos 0
          hexactsize 0
@@ -194,8 +194,8 @@ FrameWidgetClass rootFrame {
         }
         RichTextWidgetClass TxtGroupCount {
          ignorepointer 1
-         position 0.04303 0.77127
-         size 0.55428 0.16085
+         position -0.00346 0.7994
+         size 0.4768 0.12067
          hexactpos 0
          vexactpos 0
          hexactsize 0
@@ -210,7 +210,30 @@ FrameWidgetClass rootFrame {
         TextWidgetClass TxtGroupnum {
          ignorepointer 0
          position 0.29201 0.81255
-         size 0.62388 0.1069
+         size 0.24681 0.1069
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "text halign" center
+         "text valign" center
+        }
+        RichTextWidgetClass RichTextWidget4 {
+         ignorepointer 1
+         position 0.57389 0.79936
+         size 0.21033 0.12593
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Local:"
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass TxtLocalCheck {
+         ignorepointer 0
+         position 0.74875 0.80509
+         size 0.20073 0.12024
          hexactpos 0
          vexactpos 0
          hexactsize 0

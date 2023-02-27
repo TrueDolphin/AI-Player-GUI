@@ -2,7 +2,8 @@ class UICustomMenu extends UIScriptedMenu
 {
     private bool                 m_Initialized;
     private bool                 m_IsMenuOpen;
-
+    private bool                 m_running = false;
+    private bool                 m_result = false;
     //---Elements from .layout file
     private ScrollWidget 		 m_Scroller;
     private GridSpacerWidget     m_Grid;
@@ -10,12 +11,13 @@ class UICustomMenu extends UIScriptedMenu
     private Widget               m_pnl_bg;
     private ButtonWidget         m_BtnSetFaction;
     private PlayerBase           m_player;
-    private TextWidget       m_TxtPlayerName;
-    private TextWidget       m_TxtPlayerUID;
-    private TextWidget       m_TxtPlayerFaction;
-    private TextWidget       m_TxtPlayerGroup;
+    private TextWidget           m_TxtPlayerName;
+    private TextWidget           m_TxtPlayerUID;
+    private TextWidget           m_TxtPlayerFaction;
+    private TextWidget           m_TxtPlayerGroup;
     private EditBoxWidget        m_EdtFactionName;
     private TextWidget           m_TxtGroupnum;
+    private TextWidget           m_TxtLocalCheck;
 
     private ref array<ref Widget> m_CustomChildrenHighIQ;
 
@@ -75,6 +77,8 @@ class UICustomMenu extends UIScriptedMenu
             m_TxtPlayerGroup = TextWidget.Cast( layoutRoot.FindAnyWidget( "TxtPlayerGroup" ) );
             m_EdtFactionName = EditBoxWidget.Cast( layoutRoot.FindAnyWidget( "EdtFactionName" ) );
             m_TxtGroupnum = TextWidget.Cast( layoutRoot.FindAnyWidget( "TxtGroupnum" ) );
+            m_TxtLocalCheck = TextWidget.Cast( layoutRoot.FindAnyWidget( "TxtLocalCheck" ) );
+
 
             WidgetEventHandler.GetInstance().RegisterOnDoubleClick( m_Grid, this, "OnDoubleClicked" );
             WidgetEventHandler.GetInstance().RegisterOnDoubleClick( m_Scroller, this, "OnDoubleClicked" );
@@ -113,7 +117,13 @@ class UICustomMenu extends UIScriptedMenu
             } else {
             m_TxtPlayerGroup.SetText("None Detected");
             m_TxtPlayerFaction.SetText("None Detected");
-            m_TxtGroupnum.SetText("1");  
+            m_TxtGroupnum.SetText("1");
+            }
+
+            if (m_running) {
+                m_TxtLocalCheck.SetText(m_result.ToString())
+            } else {
+            thread localtimer();
             }
         }
     }
@@ -181,7 +191,10 @@ bool HasPermission(PlayerIdentity pId)
 
     return false;
 }
-
-
-
+    void localtimer(){
+    m_running = true;
+    Sleep(5000);
+    m_result = ConeVicinity.VicinityCheck(m_player);
+    m_running = false;
+    }
 };

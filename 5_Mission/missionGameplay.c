@@ -13,9 +13,9 @@ modded class MissionGameplay {
         UnlockControls();
       }
     }
-    if (!HasPermission(PermissionCheck.GetIdentity())) return;
     if (input.LocalPress("ToggleAIMenu", false)) {
         PermissionCheck = PlayerBase.Cast( GetGame().GetPlayer() );
+        if (!HasPermission(PermissionCheck.GetIdentity())) return;
       if (myCustomMenu) {
 
         if (myCustomMenu.IsMenuOpen()) {
