@@ -17,7 +17,7 @@ class ConeVicinity{
 		m_VicinityObjects.TransformToVicinityObjects(vicinityObjects);
 		for (int i = 0; i < m_VicinityObjects.Count(); i++)
 		{
-			 eAIBase ai = eAIBase.Cast(m_VicinityObjects.GetObject(i))
+			 eAIBase ai = eAIBase.Cast(m_VicinityObjects.GetObject(i));
              if (ai) return true;
 		}
         return false;

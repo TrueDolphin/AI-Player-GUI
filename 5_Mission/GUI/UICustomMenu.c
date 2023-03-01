@@ -121,7 +121,7 @@ class UICustomMenu extends UIScriptedMenu
             }
 
             if (m_running) {
-                m_TxtLocalCheck.SetText(m_result.ToString())
+                m_TxtLocalCheck.SetText(eAIBase.IsInVicinity(m_player, 100););
             } else {
             thread localtimer();
             }
@@ -193,8 +193,7 @@ bool HasPermission(PlayerIdentity pId)
 }
     void localtimer(){
     m_running = true;
-    Sleep(5000);
-    m_result = ConeVicinity.VicinityCheck(m_player);
+    Sleep(1000);
     m_running = false;
     }
 };
